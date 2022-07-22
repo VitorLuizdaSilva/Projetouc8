@@ -1,4 +1,5 @@
 package br.com.senai.projetouc8.orm;
+
 //Vitor Luiz da Silva Couto
 
 import java.util.Date;
@@ -15,7 +16,20 @@ public class Produto {
 	private Integer id;
 	private String nome;
 	private Date dataCadastro;
-	private Date validade;
+	private String tipo;
+	private Float quantidade;
+	public Float getQuantidadee() {
+		return quantidade;
+	}
+	public void setQuantidadee(Float quantidadee) {
+		this.quantidade = quantidadee;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -34,11 +48,7 @@ public class Produto {
 	public void setDataCadastro(Date dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
-	public Date getValidade() {
-		return validade;
-	}
-	public void setValidade(Date validade) {
-		this.validade = validade;
-	}
+	
 	
 }
+
