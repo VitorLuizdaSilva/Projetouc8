@@ -1,12 +1,13 @@
 package br.com.senai.projetouc8.orm;
-//Vitor Luiz da Silva Couto
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="categorias")
 public class Categoria {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,12 +18,22 @@ public class Categoria {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getGrupo() {
-		return grupo;
+	
+	public String getDescricao() {
+		return descricao;
 	}
-	public void setGrupo(String grupo) {
-		this.grupo = grupo;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
-	private String grupo;
-
+	
+	
+	private String descricao;
+	private String ativo;
+	public String getAtivo() {
+		return ativo;
+	}
+	public void setAtivo(String ativo) {
+		this.ativo = ativo;
+	}
+	
 }
