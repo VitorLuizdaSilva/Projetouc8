@@ -7,11 +7,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
-import br.com.senai.projetouc8.orm.Categoria;
+import br.com.senai.projetouc8.orm.Materia;
 
 
 @Repository
-public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
+public interface MateriaRepository extends JpaRepository<Materia, Integer> {
 
 }
 

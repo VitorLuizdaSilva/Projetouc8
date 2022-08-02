@@ -3,6 +3,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="style.css">
   	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -19,7 +20,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-							 <a class="nav-link" th:href="@{/categoria}">Categoria <span class="sr-only">(current)</span></a>
+							 <a class="nav-link" href="#">Matérias <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
 							 <a class="nav-link" href="#">Link</a>
@@ -57,22 +58,18 @@
 		</div>
 	</div>
 </div>
-<div class="container-fluid">
-	<h2 style="text-align: center;">Editar Categoria</h2>
-	<div class="jumbotron" style="width: 800px; margin: 0 auto;">
-		<form th:action="@{/categoria/{id}(id=${categoria.id})}" th:object="${categoria}" method="POST">
-			<div class="form-group">
-				<label>Categoria</label>
-				<input type="text" name="categoria" th:field="*{descricao}" class="form-control" required>
-			</div>
-			<div class="form-group">
-				<label>Ativo</label>
-				<input type="text" name="categoria" th:field="*{ativo}" class="form-control" required>
-			</div>
-			<button class="btn btn-success">Salvar</button>
-		</form>
-	</div>
-  </table>
-</div>
-</body>
-</html>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Matérias</th>
+      </tr>
+    </thead>
+ </table>
+ <table class="table table-striped">
+    <thead>
+     <tr> 
+      <th><a href="/materia"target="_blank">Matemática</a>
+      </th>
+     </tr>
+    </thead>
+ </table>

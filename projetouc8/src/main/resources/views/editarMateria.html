@@ -58,9 +58,9 @@
 	</div>
 </div>
 <div class="container-fluid">
-	<h2 style="text-align: center;">Cadastro de Categoria</h2>
+	<h2 style="text-align: center;">Editar Categoria</h2>
 	<div class="jumbotron" style="width: 800px; margin: 0 auto;">
-		<form th:action="@{/materia}" th:object="${materia}" method="POST">
+		<form th:action="@{/materia/{id}(id=${materia.id})}" th:object="${materia}" method="POST">
 			<div class="form-group">
 				<label>Categoria</label>
 				<input type="text" name="materia" th:field="*{descricao}" class="form-control" required>
