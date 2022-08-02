@@ -18,10 +18,10 @@ public class MateriaController {
 	private MateriaServico servico;
 	
 
-	@GetMapping({"/materias", "/"})	
+	@GetMapping({"/provas", "/"})	
 	public String listarMaterias(Model modelo) {
 		modelo.addAttribute("materia", servico.listarMaterias());
-		return "materias"; //mostrar a página grupo.html
+		return "provas"; //mostrar a página grupo.html
 	}
 	
 	@GetMapping({"/materia", "/"})
@@ -59,8 +59,8 @@ public class MateriaController {
 	public String atualizarMateria(@PathVariable Integer id, @ModelAttribute("materia") Materia materia, Model modelo) {
 		Materia cat = servico.consultarMateriaId(id);
 		cat.setId(id);
-		cat.setDescricao(materia.getDescricao());
-		cat.setAtivo(materia.getAtivo());
+		cat.setMaterias(materia.getMaterias());
+		cat.setTema(materia.getTema());
 		servico.atualizarMateria(cat);
 		return "redirect:/materia";
 	}
